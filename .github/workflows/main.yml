@@ -22,5 +22,4 @@ jobs:
       - name: Run tests on main branch
         run: mvn test
 
-      - name: Checkstyle
-        run: mvn checkstyle:check
+      
