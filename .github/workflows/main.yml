@@ -9,6 +9,8 @@ jobs:
     steps:
       - name: code checkout
         uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
 
       - name: Mvn Build
         run: mvn install
@@ -17,7 +19,9 @@ jobs:
     needs: Build
     steps:
       - name: code checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
 
       - name: Run tests on main branch
         run: mvn test
