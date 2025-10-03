@@ -38,7 +38,7 @@ jobs:
   Testing:
     runs-on: ubuntu-latest
     needs: Build
-    
+
     steps:
       - name: code checkout
         uses: actions/checkout@v5
@@ -49,6 +49,6 @@ jobs:
         if: github.ref == 'refs/heads/main'
         run: mvn test
 
-       - name: Run tests on non-main branches
+      - name: Run tests on non-main branches
         if: github.ref != 'refs/heads/main'
         run: echo "Skipping unit tests and code analysis on non-main branches"
