@@ -80,7 +80,7 @@ jobs:
         with:
           name: trivy-scan-results
           path: trivy-results.json
-  BUILD AND PUBLISH:
+  BUILD_AND_PUBLISH:
     name: Build and Publish Docker image to ECR
     runs-on: ubuntu-latest
     environment: production
