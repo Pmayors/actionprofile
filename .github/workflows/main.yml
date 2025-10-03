@@ -100,11 +100,11 @@ jobs:
           aws-region: ${{ vars.AWS_REGION }}
 
       - name: Login to Amazon ECR
-        uses: aws-actions/amazon-ecr-login@v2
+        uses: aws-actions/amazon-ecr-login@v1
 
       - name: Build and push Docker image
         id: login-ecr
-        uses: aws-actions/amazon-ecr-build-push@v2
+        uses: aws-actions/amazon-ecr-build-push@v1
 
       - name: Build, tag and push to ECR
         id: build-image
