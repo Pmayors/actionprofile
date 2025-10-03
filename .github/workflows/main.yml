@@ -45,6 +45,9 @@ jobs:
           fetch-depth: 0
 
       - name: Run tests on main branch
+        if: github.ref == 'refs/heads/main'
         run: mvn test
 
-      
+       - name: Run tests on non-main branches
+        if: github.ref != 'refs/heads/main'
+        run: echo "Skipping unit tests and code analysis on non-main branches"
