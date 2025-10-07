@@ -7,9 +7,6 @@ on:
       - "main"
 
   workflow_dispatch:
-  
-  schedule:
-    - cron: '10 14 * * 1-5'  # At 14:10 every weekday
 env: 
   ECR_REPOSITORY: 'vprofile-appimage'
 
